@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Citident Dental Clinic"
+version = "1.0.0"
+id = "artifacts/citident"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19916
+
+[services.development]
+run = "pnpm --filter @workspace/citident run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/citident", "run", "build" ]
+publicDir = "artifacts/citident/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19916"
+BASE_PATH = "/"

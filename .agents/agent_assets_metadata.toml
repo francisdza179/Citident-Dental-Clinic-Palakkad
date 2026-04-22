@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "3CDewbRngjyD141-tb5lu"
+uri = "file://attached_assets/generated_images/citident_logo.png"
+type = "image"
+title = "citident logo mark"
