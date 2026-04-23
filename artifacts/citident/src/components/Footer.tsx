@@ -12,9 +12,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 mb-16">
           <div className="lg:col-span-5">
-            <div className="inline-flex bg-white/95 p-5 rounded-3xl shadow-lg ring-1 ring-black/5 mb-8 hover:scale-105 transition-transform">
+            <Link href="/" className="inline-flex mb-8">
               <img src={logoUrl} alt="Citident Logo" className="h-24 w-auto object-contain" />
-            </div>
+            </Link>
             <p className="text-primary-foreground/80 text-lg max-w-sm mb-10 leading-relaxed">
               Palakkad's premium family dental clinic providing cutting-edge, honest care.
             </p>
