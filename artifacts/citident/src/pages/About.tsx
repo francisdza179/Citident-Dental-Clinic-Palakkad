@@ -53,6 +53,9 @@ export default function About() {
                 <p>
                   At Citident, we believe visiting the dentist shouldn't feel like a clinical transaction. We've designed a calm, inviting space where anxiety melts away, replaced by trust and transparency.
                 </p>
+                <p className="text-primary font-medium">
+                  Serving Palakkad since 2000, Citident has grown into a trusted clinic built around honest care and long-term relationships.
+                </p>
                 <p>
                   Led by our chief surgeons, our team focuses on <strong>conservative dentistry</strong>. That means we explore every cutting-edge option to save your natural teeth before ever considering extractions. It's honest care, done right.
                 </p>
