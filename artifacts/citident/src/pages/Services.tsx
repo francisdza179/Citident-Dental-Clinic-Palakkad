@@ -183,9 +183,6 @@ export default function Services() {
             ))}
           </div>
           
-          <div className="mt-8 text-center text-sm text-muted-foreground">
-            Six videos are now featured here.
-          </div>
         </div>
       </section>
     </Layout>
