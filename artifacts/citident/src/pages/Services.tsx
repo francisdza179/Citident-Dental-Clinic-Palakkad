@@ -141,28 +141,41 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Before / After Focus */}
+      {/* Video Gallery */}
       <section className="py-32">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Proof in the results.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">See the care in action.</h2>
             <p className="text-muted-foreground text-lg">
-              We specialize in seamless cosmetic restorations that look and function exactly like natural teeth.
+              A few moments from real clinic visits, treatments, and transformations.
             </p>
           </FadeIn>
           
-          <FadeIn delay={0.2} className="max-w-4xl mx-auto">
-            <motion.div 
-              whileHover={{ scale: 1.01 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-border/50"
-            >
-              <img src={beforeAfterUrl} alt="Before and After Chipped Tooth Correction" className="w-full rounded-2xl" />
-              <div className="absolute inset-x-0 bottom-8 flex justify-center">
-                <div className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full shadow-lg text-sm font-bold text-primary uppercase tracking-wider">
-                  Before / After — Chipped Tooth Correction
-                </div>
-              </div>
-            </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {Array.from({ length: 7 }).map((_, index) => (
+              <FadeIn key={index} delay={index * 0.08}>
+                <motion.div
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  className="relative rounded-3xl overflow-hidden shadow-lg bg-card border border-border/50 aspect-[9/16]"
+                >
+                  <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+                    <div className="text-center px-6">
+                      <div className="mx-auto mb-3 h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" className="h-7 w-7 text-primary" fill="currentColor" aria-hidden="true">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                      <p className="text-sm font-medium text-primary">Video {index + 1}</p>
+                      <p className="text-xs text-muted-foreground mt-1">Replace with clinic clip</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </FadeIn>
+            ))}
+          </div>
+          
+          <div className="mt-8 text-center text-sm text-muted-foreground">
+            Share the 7 video files and I’ll wire them in directly.
           </FadeIn>
         </div>
       </section>
