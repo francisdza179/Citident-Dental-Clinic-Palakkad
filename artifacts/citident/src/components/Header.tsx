@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Phone, Menu, X } from "lucide-react";
@@ -18,13 +18,38 @@ const NAV_LINKS = [
 export function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-background/90 backdrop-blur-lg shadow-[0_8px_30px_-12px_rgba(15,23,42,0.15)] border-b border-border/60"
+          : "bg-background/70 backdrop-blur-md border-b border-transparent"
+      }`}
+    >
+      <div
+        className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "h-16" : "h-24"
+        }`}
+      >
         <Link href="/">
           <div className="flex items-center cursor-pointer group">
-            <img src={logoUrl} alt="Citident Logo" className="h-20 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
+            <img
+              src={logoUrl}
+              alt="Citident Logo"
+              style={{ mixBlendMode: "multiply" }}
+              className={`w-auto object-contain object-left scale-x-110 origin-left group-hover:scale-x-[1.15] group-hover:scale-y-105 transition-all duration-300 ${
+                scrolled ? "h-12" : "h-20"
+              }`}
+            />
           </div>
         </Link>
 
@@ -54,13 +79,29 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-            <Clock className="w-4 h-4 text-secondary" />
-            <span>Mon-Sat, 9:30 AM - 7:30 PM</span>
-          </div>
+          <AnimatePresence initial={false}>
+            {!scrolled && (
+              <motion.div
+                key="hours"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 10 }}
+                transition={{ duration: 0.25 }}
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground"
+              >
+                <Clock className="w-4 h-4 text-secondary" />
+                <span>Mon-Sat, 9:30 AM - 7:30 PM</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <a href={PHONE_LINK} className="relative group overflow-hidden rounded-full">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer z-10" />
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-6 transition-transform hover:scale-105 active:scale-95">
+            <Button
+              className={`bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full transition-all hover:scale-105 active:scale-95 ${
+                scrolled ? "px-5 h-9 text-sm" : "px-6 h-10"
+              }`}
+            >
+              <Phone className={`mr-2 ${scrolled ? "w-4 h-4" : "w-4 h-4"}`} />
               Call to book
             </Button>
           </a>

@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         style={{ scaleX }}
       />
       <Header />
-      <main className="flex-1 pt-20 flex flex-col relative z-10 bg-background">
+      <main className="flex-1 pt-24 flex flex-col relative z-10 bg-background">
         {children}
       </main>
       <Footer />
