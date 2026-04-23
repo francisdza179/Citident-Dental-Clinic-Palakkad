@@ -124,7 +124,7 @@ export default function Home() {
               }
             ].map((doctor, index) => (
               <FadeIn key={doctor.name} delay={index * 0.1}>
-                <motion.div whileHover={{ y: -6 }} className="group rounded-[2rem] border border-border/60 bg-card overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                <motion.div whileHover={{ y: -6 }} className="group h-full rounded-[2rem] border border-border/60 bg-card overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent">
                     <motion.img
                       whileHover={{ scale: 1.05 }}
@@ -134,7 +134,7 @@ export default function Home() {
                       className={`h-full w-full object-cover object-center transition-transform duration-500 ${doctor.name === "Dr. Dinesh S.P." ? "scale-x-[-1]" : ""}`}
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <p className="text-sm uppercase tracking-[0.2em] text-secondary font-semibold">{doctor.title}</p>
                     <h3 className="mt-2 text-2xl font-bold text-primary">{doctor.name}</h3>
                     <p className="mt-4 text-sm leading-7 text-muted-foreground">{doctor.desc}</p>
