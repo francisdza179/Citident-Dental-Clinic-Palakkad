@@ -168,6 +168,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="text-sm uppercase tracking-[0.25em] text-secondary font-semibold mb-4">
+              Serving Palakkad since 2000
+            </p>
             <Link href="/about">
               <Button variant="outline" className="rounded-full px-8 hover:bg-primary hover:text-primary-foreground transition-all group">
                 More about our philosophy <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
