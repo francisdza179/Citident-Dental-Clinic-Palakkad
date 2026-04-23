@@ -10,7 +10,7 @@ import heroUrl from "@assets/Reception_-_Hero_Image_1776875350329.png";
 import team1Url from "@assets/Doctor_with_Her_Team_1776875350328.jpg";
 import beforeAfterUrl from "@assets/Chipped_Tooth_Correction_1776875350325.jpg";
 import patientHappyUrl from "@assets/Doctor_with_Patient_Straight_Pose_1776875350329.jpg";
-import doctorPriyaUrl from "@assets/Doctor_Priya_Dinesh_Portrait_1776920640295.png";
+import doctorPriyaUrl from "@assets/Dr__Priya_-_2nd_Portrait_1776928355657.png";
 import doctorDineshUrl from "@assets/Dr_Dinesh_SP_2nd_Portrait_1776925453134.png";
 import juniorDentistUrl from "@assets/Junior_Dentist_-_2nd_portrait_1776925453135.png";
 
@@ -129,7 +129,7 @@ export default function Home() {
                     <motion.img
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                      src={doctor.name === "Dr. Dinesh S.P." ? doctorDineshUrl : doctor.img}
+                      src={doctor.img}
                       alt={doctor.name}
                       className={`h-full w-full object-cover object-center transition-transform duration-500 ${doctor.name === "Dr. Dinesh S.P." ? "scale-x-[-1]" : ""}`}
                     />
