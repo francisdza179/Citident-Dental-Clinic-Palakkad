@@ -10,22 +10,14 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground pt-24 pb-12 rounded-t-[3rem] mt-[-2rem] relative z-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid gap-14 lg:grid-cols-[1.2fr_0.8fr_1fr] items-start mb-16">
+        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr_1fr] items-start mb-16">
           <div>
             <Link href="/" className="inline-flex mb-8">
-              <img src={logoUrl} alt="Citident Logo" className="h-32 w-auto object-contain" />
+              <img src={logoUrl} alt="Citident Logo" className="h-40 w-auto object-contain" />
             </Link>
             <p className="text-primary-foreground/80 text-lg max-w-md mb-10 leading-relaxed">
               Palakkad's premium family dental clinic providing cutting-edge, honest care.
             </p>
-            <div className="flex items-start gap-4">
-              <MapPin className="w-6 h-6 text-secondary mt-1 shrink-0" />
-              <div>
-                <p className="font-medium text-lg mb-1">Clinic Address</p>
-                <p className="text-primary-foreground/70">Priyadarshini Rd, opposite Aroma Cinemas<br/>Parakkunnam, Palakkad, Kerala 678001</p>
-                <p className="text-primary-foreground/50 text-sm mt-1">Plus code: QMG3+J7 Palakkad</p>
-              </div>
-            </div>
           </div>
 
           <div>
@@ -80,6 +72,15 @@ export function Footer() {
                 title="Google Maps Location for Citident Dental Clinic"
                 className="absolute inset-0 grayscale contrast-125"
               ></iframe>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <MapPin className="w-6 h-6 text-secondary mt-1 shrink-0" />
+              <div>
+                <p className="font-medium text-lg mb-1">Clinic Address</p>
+                <p className="text-primary-foreground/70">Priyadarshini Rd, opposite Aroma Cinemas<br/>Parakkunnam, Palakkad, Kerala 678001</p>
+                <p className="text-primary-foreground/50 text-sm mt-1">Plus code: QMG3+J7 Palakkad</p>
+              </div>
             </div>
           </div>
         </div>
