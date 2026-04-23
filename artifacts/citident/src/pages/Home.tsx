@@ -13,6 +13,9 @@ import patientHappyUrl from "@assets/Doctor_with_Patient_Straight_Pose_177687535
 import doctorPriyaUrl from "@assets/Dr__Priya_-_2nd_Portrait_1776928355657.png";
 import doctorDineshUrl from "@assets/Dr_Dinesh_SP_2nd_Portrait_1776925453134.png";
 import juniorDentistUrl from "@assets/Junior_Dentist_-_2nd_portrait_1776925453135.png";
+import teamPhoto1Url from "@assets/Doctor_with_Her_Team_2_1776928588297.jpg";
+import teamPhoto2Url from "@assets/Doctor_with_Patient_Profile_Pose_1776928588297.jpg";
+import teamPhoto3Url from "@assets/The_Entire_Team_1776928588298.jpg";
 
 const PHONE = "+914912529090";
 const PHONE_LINK = `tel:${PHONE}`;
@@ -154,6 +157,17 @@ export default function Home() {
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               At Citident, we believe visiting the dentist shouldn't feel like a clinical transaction. We've designed a calm, inviting space where anxiety melts away, replaced by trust and transparency. Our team focuses on conservative dentistry—saving your natural teeth before considering extractions.
             </p>
+            <div className="grid grid-cols-3 gap-3 mb-10">
+              {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => (
+                <div key={src} className={`rounded-2xl overflow-hidden shadow-sm border border-border/50 ${index === 1 ? "md:-mt-6" : ""}`}>
+                  <img
+                    src={src}
+                    alt={`Citident team ${index + 1}`}
+                    className="w-full h-full object-cover aspect-[3/4]"
+                  />
+                </div>
+              ))}
+            </div>
             <Link href="/about">
               <Button variant="outline" className="rounded-full px-8 hover:bg-primary hover:text-primary-foreground transition-all group">
                 More about our philosophy <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
