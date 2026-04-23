@@ -159,11 +159,11 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-3 gap-3 mb-10">
               {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => (
-                <div key={src} className={`rounded-2xl overflow-hidden shadow-sm border border-border/50 ${index === 1 ? "md:-mt-6" : ""}`}>
+                <div key={src} className={`group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 1 ? "md:-mt-6" : ""}`}>
                   <img
                     src={src}
                     alt={`Citident team ${index + 1}`}
-                    className="w-full h-full object-cover aspect-[3/4]"
+                    className="w-full h-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               ))}
