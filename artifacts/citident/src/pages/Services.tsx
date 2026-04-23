@@ -155,7 +155,6 @@ export default function Services() {
             {[
               "@assets/Smile_Transformation_1776942861155.mp4",
               "@assets/Smile_Transformation_2_1776942861154.mp4",
-              "@assets/Smile_Transformation_3_1776942861154.mp4",
               "@assets/Smile_Transformation_4_1776942861154.mp4",
               "@assets/Smile_Transformation_5_1776942861154.mp4",
               "@assets/Smile_Transformation_6_1776942861155.mp4",
@@ -179,7 +178,7 @@ export default function Services() {
           </div>
           
           <div className="mt-8 text-center text-sm text-muted-foreground">
-            Share the 7 video files and I’ll wire them in directly.
+            Six videos are now featured here.
           </div>
         </div>
       </section>
