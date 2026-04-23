@@ -24,7 +24,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer group">
-            <img src={logoUrl} alt="Citident Logo" className="h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
+            <img src={logoUrl} alt="Citident Logo" className="h-16 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
             <div className="flex flex-col">
               <span className="font-bold text-primary leading-none tracking-tight text-xl">Citident</span>
               <span className="font-malayalam text-xs text-muted-foreground mt-1">സിറ്റിഡൻ്റ് ഡെൻ്റൽ ക്ലിനിക്</span>
