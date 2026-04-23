@@ -41,11 +41,11 @@ export function Header() {
         }`}
       >
         <Link href="/">
-          <div className="flex items-center cursor-pointer group -ml-2 sm:-ml-4">
+          <div className="flex items-center cursor-pointer -ml-2 sm:-ml-4">
             <img
               src={logoUrl}
               alt="Citident Dental Clinic"
-              className={`w-auto object-contain object-left origin-left transition-all duration-300 group-hover:scale-[1.03] ${
+              className={`w-auto object-contain object-left origin-left transition-all duration-300 ${
                 scrolled ? "h-10 md:h-12" : "h-14 md:h-16"
               }`}
             />
