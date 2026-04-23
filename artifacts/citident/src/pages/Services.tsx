@@ -19,6 +19,12 @@ import {
 import alignersUrl from "@assets/Doctor_Presenting_Aligners_to_a_Patient_2_1776875350327.jpg";
 import work3Url from "@assets/Dr._Priya_Dinesh_at_Work_1776875350329.jpg";
 import beforeAfterUrl from "@assets/Chipped_Tooth_Correction_1776875350325.jpg";
+import smileTransformationUrl from "@assets/Smile_Transformation_1776942861155.mp4";
+import smileTransformation2Url from "@assets/Smile_Transformation_2_1776942861154.mp4";
+import smileTransformation4Url from "@assets/Smile_Transformation_4_1776942861154.mp4";
+import smileTransformation5Url from "@assets/Smile_Transformation_5_1776942861154.mp4";
+import smileTransformation6Url from "@assets/Smile_Transformation_6_1776942861155.mp4";
+import splintHeadgearKidsUrl from "@assets/Splint_Headgear_Kids_1776942861155.mp4";
 
 export default function Services() {
   usePageMeta({
@@ -153,12 +159,12 @@ export default function Services() {
           
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {[
-              "@assets/Smile_Transformation_1776942861155.mp4",
-              "@assets/Smile_Transformation_2_1776942861154.mp4",
-              "@assets/Smile_Transformation_4_1776942861154.mp4",
-              "@assets/Smile_Transformation_5_1776942861154.mp4",
-              "@assets/Smile_Transformation_6_1776942861155.mp4",
-              "@assets/Splint_Headgear_Kids_1776942861155.mp4",
+              smileTransformationUrl,
+              smileTransformation2Url,
+              smileTransformation4Url,
+              smileTransformation5Url,
+              smileTransformation6Url,
+              splintHeadgearKidsUrl,
             ].map((src, index) => (
               <FadeIn key={index} delay={index * 0.08}>
                 <motion.div
