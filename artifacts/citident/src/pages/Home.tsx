@@ -247,38 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Real Results */}
-      <section className="py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeIn className="order-2 lg:order-1">
-               <motion.div 
-                 whileHover={{ scale: 1.02 }}
-                 className="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-4"
-               >
-                <img src={beforeAfterUrl} alt="Before and After Chipped Tooth Correction" className="w-full rounded-xl" />
-                <div className="absolute inset-x-0 bottom-8 flex justify-center">
-                  <div className="bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm text-sm font-bold text-primary uppercase tracking-wider">
-                    Before / After
-                  </div>
-                </div>
-               </motion.div>
-            </FadeIn>
-            <FadeIn className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Results that change lives.</h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                A badly broken or chipped tooth doesn't always mean an extraction. Our conservative approach means we exhaust every option to restore your natural smile seamlessly.
-              </p>
-              <a href={PHONE_LINK}>
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-8 transition-transform hover:scale-105 active:scale-95">
-                  Book a consultation
-                </Button>
-              </a>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6">
