@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoUrl from "@assets/generated_images/citident_logo.png";
+import logoUrl from "@assets/Citident_Dental_Clinic_Logo_1776925990537.png";
 
 const PHONE = "+914912529090";
 const PHONE_LINK = `tel:${PHONE}`;

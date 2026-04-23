@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { MapPin, Phone, Clock } from "lucide-react";
-import logoUrl from "@assets/generated_images/citident_logo.png";
+import logoUrl from "@assets/Citident_Dental_Clinic_Logo_1776925990537.png";
 
 const PHONE = "+914912529090";
 const PHONE_LINK = `tel:${PHONE}`;
