@@ -10,6 +10,9 @@ import heroUrl from "@assets/Reception_-_Hero_Image_1776875350329.png";
 import team1Url from "@assets/Doctor_with_Her_Team_1776875350328.jpg";
 import beforeAfterUrl from "@assets/Chipped_Tooth_Correction_1776875350325.jpg";
 import patientHappyUrl from "@assets/Doctor_with_Patient_Straight_Pose_1776875350329.jpg";
+import doctorPriyaUrl from "@assets/Doctor_Priya_Dinesh_Portrait_1776920640295.png";
+import doctorDineshUrl from "@assets/Dr_Dinesh_SP_2nd_Portrait_1776925453134.png";
+import juniorDentistUrl from "@assets/Junior_Dentist_-_2nd_portrait_1776925453135.png";
 
 const PHONE = "+914912529090";
 const PHONE_LINK = `tel:${PHONE}`;
@@ -82,6 +85,63 @@ export default function Home() {
               <p className="text-sm font-medium text-foreground italic">"I went to see this dentist expecting my tooth can't be saved... Am very happy now to have got my smile back."</p>
               <p className="text-xs text-muted-foreground mt-2">— Bharathy MK</p>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-secondary font-semibold">Meet Our Doctors</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-3">The people behind the care.</h2>
+            </div>
+            <Link href="/about">
+              <Button variant="outline" className="rounded-full px-6 hover:bg-primary hover:text-primary-foreground">
+                Learn more about the team
+              </Button>
+            </Link>
+          </FadeIn>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Dr. Priya Dinesh",
+                title: "Chief Dental Surgeon, BDS",
+                img: doctorPriyaUrl,
+                desc: "A calm and reassuring presence at the chairside, Dr. Priya Dinesh leads with a careful, tooth-saving approach. She focuses on conservative treatment planning and clear communication so families always feel informed and comfortable."
+              },
+              {
+                name: "Dr. Dinesh S.P.",
+                title: "Chief Dental Surgeon, BDS",
+                img: doctorDineshUrl,
+                desc: "Dr. Dinesh S.P. brings a warm, confident manner and a practical eye for long-term dental health. He is known for making treatment feel clear, steady, and patient-friendly."
+              },
+              {
+                name: "Junior Dentist",
+                title: "Junior Dentist",
+                img: juniorDentistUrl,
+                desc: "Our Junior Dentist supports the senior team with attentiveness and care during everyday treatment. She represents the next generation of the clinic, combining gentle chairside support with a fresh, modern perspective."
+              }
+            ].map((doctor, index) => (
+              <FadeIn key={doctor.name} delay={index * 0.1}>
+                <motion.div whileHover={{ y: -6 }} className="group rounded-[2rem] border border-border/60 bg-card overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent">
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: "spring", stiffness: 260, damping: 24 }}
+                      src={doctor.name === "Dr. Dinesh S.P." ? doctorDineshUrl : doctor.img}
+                      alt={doctor.name}
+                      className={`h-full w-full object-cover object-center transition-transform duration-500 ${doctor.name === "Dr. Dinesh S.P." ? "scale-x-[-1]" : ""}`}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <p className="text-sm uppercase tracking-[0.2em] text-secondary font-semibold">{doctor.title}</p>
+                    <h3 className="mt-2 text-2xl font-bold text-primary">{doctor.name}</h3>
+                    <p className="mt-4 text-sm leading-7 text-muted-foreground">{doctor.desc}</p>
+                  </div>
+                </motion.div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
