@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoUrl from "@assets/Citident_Dental_Clinic_Logo_2_1776927513263.png";
+import logoUrl from "@assets/generated_images/citident_logo_premium.png";
 
 const PHONE = "+914912529090";
 const PHONE_LINK = `tel:${PHONE}`;
@@ -41,13 +41,12 @@ export function Header() {
         }`}
       >
         <Link href="/">
-          <div className="flex items-center cursor-pointer group">
+          <div className="flex items-center cursor-pointer group -ml-2 sm:-ml-4">
             <img
               src={logoUrl}
-              alt="Citident Logo"
-              style={{ mixBlendMode: "multiply" }}
-              className={`w-auto object-contain object-left scale-x-110 origin-left group-hover:scale-x-[1.15] group-hover:scale-y-105 transition-all duration-300 ${
-                scrolled ? "h-12" : "h-20"
+              alt="Citident Dental Clinic"
+              className={`w-auto object-contain object-left origin-left transition-all duration-300 group-hover:scale-[1.03] ${
+                scrolled ? "h-14 md:h-16" : "h-20 md:h-24"
               }`}
             />
           </div>

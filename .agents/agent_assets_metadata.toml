@@ -6,3 +6,9 @@ id = "3CDewbRngjyD141-tb5lu"
 uri = "file://attached_assets/generated_images/citident_logo.png"
 type = "image"
 title = "citident logo mark"
+
+[[generated]]
+id = "iWi0lNJUVcOfiKqALhzsD"
+uri = "file://attached_assets/generated_images/citident_logo_premium.png"
+type = "image"
+title = "citident premium logo"
