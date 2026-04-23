@@ -13,8 +13,8 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-16 mb-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-8">
-              <div className="bg-white p-2 rounded-xl hover:scale-105 transition-transform">
-                <img src={logoUrl} alt="Citident Logo" className="h-10 w-auto" />
+              <div className="bg-white/95 p-4 rounded-2xl shadow-lg ring-1 ring-black/5 hover:scale-105 transition-transform">
+                <img src={logoUrl} alt="Citident Logo" className="h-20 w-auto object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-2xl leading-none tracking-tight">Citident</span>
