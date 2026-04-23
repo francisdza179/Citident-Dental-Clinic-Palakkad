@@ -152,23 +152,27 @@ export default function Services() {
           </FadeIn>
           
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {Array.from({ length: 7 }).map((_, index) => (
+            {[
+              "@assets/Smile_Transformation_1776942861155.mp4",
+              "@assets/Smile_Transformation_2_1776942861154.mp4",
+              "@assets/Smile_Transformation_3_1776942861154.mp4",
+              "@assets/Smile_Transformation_4_1776942861154.mp4",
+              "@assets/Smile_Transformation_5_1776942861154.mp4",
+              "@assets/Smile_Transformation_6_1776942861155.mp4",
+              "@assets/Splint_Headgear_Kids_1776942861155.mp4",
+            ].map((src, index) => (
               <FadeIn key={index} delay={index * 0.08}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}
                   className="relative rounded-3xl overflow-hidden shadow-lg bg-card border border-border/50 aspect-[9/16]"
                 >
-                  <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
-                    <div className="text-center px-6">
-                      <div className="mx-auto mb-3 h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center">
-                        <svg viewBox="0 0 24 24" className="h-7 w-7 text-primary" fill="currentColor" aria-hidden="true">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                      <p className="text-sm font-medium text-primary">Video {index + 1}</p>
-                      <p className="text-xs text-muted-foreground mt-1">Replace with clinic clip</p>
-                    </div>
-                  </div>
+                  <video
+                    src={src}
+                    className="h-full w-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  />
                 </motion.div>
               </FadeIn>
             ))}
@@ -176,7 +180,7 @@ export default function Services() {
           
           <div className="mt-8 text-center text-sm text-muted-foreground">
             Share the 7 video files and I’ll wire them in directly.
-          </FadeIn>
+          </div>
         </div>
       </section>
     </Layout>
