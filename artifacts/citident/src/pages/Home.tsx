@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { MapPin, Phone, ChevronRight } from "lucide-react";
+import { MapPin, Phone, ChevronRight, Stethoscope, Activity, Crown, Smile, Sparkles, Anchor, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout, FadeIn } from "@/components/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -198,15 +198,18 @@ export default function Home() {
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "General Dentistry", desc: "Thorough exams, cleanings, and preventative care." },
-              { title: "Root Canal Treatment", desc: "Pain-free procedures to save infected teeth." },
-              { title: "Clear Aligners", desc: "Modern, invisible alignment solutions." },
-            ].map((service, i) => (
+            {([
+              { title: "General Dentistry", Icon: Stethoscope, desc: "Routine check-ups, scaling, polishing, and preventative care for the whole family — catching issues early, before they grow." },
+              { title: "Root Canal Treatment", Icon: Activity, desc: "Painless, single-sitting root canals with advanced rotary instruments to save badly infected or broken teeth." },
+              { title: "Clear Aligners & Braces", Icon: Smile, desc: "Near-invisible aligners and modern orthodontics that gently straighten teeth and correct bite issues." },
+              { title: "Cosmetic Dentistry", Icon: Sparkles, desc: "Veneers, composite bonding, and smile makeovers planned around your face — beautiful, natural results." },
+              { title: "Crowns & Restorations", Icon: Crown, desc: "Strong, natural-looking zirconia and ceramic crowns, bridges, and tooth-coloured fillings built to last." },
+              { title: "Dental Implants", Icon: Anchor, desc: "Permanent titanium implants — a stable, long-term replacement that looks and feels like a real tooth." },
+            ] as { title: string; Icon: LucideIcon; desc: string }[]).map((service, i) => (
               <FadeIn key={i} delay={i * 0.1} className="group cursor-pointer p-6 rounded-3xl border border-border/50 hover:border-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-card relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="h-12 w-12 rounded-xl bg-muted flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300 group-hover:scale-110">
-                  <div className="w-4 h-4 rounded-full bg-primary" />
+                <div className="h-12 w-12 rounded-xl bg-muted flex items-center justify-center mb-6 group-hover:bg-secondary transition-all duration-300 group-hover:scale-110 relative z-10">
+                  <service.Icon className="w-6 h-6 text-primary group-hover:text-secondary-foreground transition-colors duration-300" strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3 relative z-10">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed relative z-10">{service.desc}</p>
