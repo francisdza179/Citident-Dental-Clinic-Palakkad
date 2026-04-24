@@ -5,6 +5,7 @@ import { MapPin, Phone, ChevronRight, Stethoscope, Activity, Crown, Smile, Spark
 import { Button } from "@/components/ui/button";
 import { Layout, FadeIn } from "@/components/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import heroUrl from "@assets/Reception_-_Hero_Image_1776875350329.png";
 import team1Url from "@assets/Doctor_with_Her_Team_1776875350328.jpg";
@@ -259,38 +260,70 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">Loved by Palakkad families.</h2>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                text: "CitiDental clinic provides exemplary dental care in a warm and inviting atmosphere. The clinic boasts state-of-the-art equipment, ensuring cutting-edge treatments and procedures.",
-                author: "Ameen"
-              },
-              {
-                text: "I went to see this dentist with a badly broken tooth expecting that it can't be saved, but was amazed with the different options... Am very happy now to have got my smile back.",
-                author: "Bharathy MK"
-              }
-            ].map((review, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-card p-8 rounded-3xl shadow-sm border border-border/50 h-full flex flex-col hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map(star => (
-                      <motion.svg 
-                        key={star} 
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.3 + (star * 0.1) }}
-                        className="w-5 h-5 text-secondary fill-current" viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </motion.svg>
+          <Carousel opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {[
+                [
+                  {
+                    text: "CitiDental clinic provides exemplary dental care in a warm and inviting atmosphere. The clinic boasts state-of-the-art equipment, ensuring cutting-edge treatments and procedures.",
+                    author: "Ameen"
+                  },
+                  {
+                    text: "I went to see this dentist with a badly broken tooth expecting that it can't be saved, but was amazed with the different options... Am very happy now to have got my smile back.",
+                    author: "Bharathy MK"
+                  }
+                ],
+                [
+                  {
+                    text: "Excellent service. They even accommodated my request for consultation, on short notice. I strongly recommend.",
+                    author: "Balasubramanian R.V"
+                  },
+                  {
+                    text: "I just consult this dentist with badly broken tooth expecting that it cant be saved, but my tooth saving amazed with the different options . thank you doctor .Am very happy now because i got my smile back.",
+                    author: "Nikhil KV"
+                  }
+                ],
+                [
+                  {
+                    text: "Very very friendly doctor and very efficient team. Loved the experience for both me and my mother.",
+                    author: "Sanjeev"
+                  },
+                  {
+                    text: "Very good doctor , reasonable cost, perfect treatment. Very happy about it",
+                    author: "Abirami Anup"
+                  }
+                ]
+              ].map((slide, slideIndex) => (
+                <CarouselItem key={slideIndex}>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {slide.map((review, i) => (
+                      <FadeIn key={review.author} delay={i * 0.1}>
+                        <div className="bg-card p-8 rounded-3xl shadow-sm border border-border/50 h-full flex flex-col hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
+                          <div className="flex gap-1 mb-4">
+                            {[1,2,3,4,5].map(star => (
+                              <motion.svg 
+                                key={star} 
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.3 + (star * 0.1) }}
+                                className="w-5 h-5 text-secondary fill-current" viewBox="0 0 20 20"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </motion.svg>
+                            ))}
+                          </div>
+                          <p className="text-foreground/80 text-lg leading-relaxed flex-grow italic">"{review.text}"</p>
+                          <p className="mt-6 font-bold text-primary">— {review.author}</p>
+                        </div>
+                      </FadeIn>
                     ))}
                   </div>
-                  <p className="text-foreground/80 text-lg leading-relaxed flex-grow italic">"{review.text}"</p>
-                  <p className="mt-6 font-bold text-primary">— {review.author}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex left-3" />
+            <CarouselNext className="hidden md:flex right-3" />
+          </Carousel>
         </div>
       </section>
 
