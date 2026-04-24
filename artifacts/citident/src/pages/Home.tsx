@@ -260,7 +260,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">Loved by Palakkad families.</h2>
           </FadeIn>
 
-          <Carousel opts={{ loop: true }} className="w-full">
+          <Carousel opts={{ loop: true }} plugins={[]} className="w-full">
             <CarouselContent>
               {[
                 [
@@ -321,8 +321,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex left-3" />
-            <CarouselNext className="hidden md:flex right-3" />
+            <CarouselPrevious className="hidden md:flex -left-6 lg:-left-10 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="hidden md:flex -right-6 lg:-right-10 top-1/2 -translate-y-1/2" />
           </Carousel>
         </div>
       </section>
