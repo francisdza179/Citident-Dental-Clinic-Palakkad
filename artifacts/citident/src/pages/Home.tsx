@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Layout, FadeIn } from "@/components/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import heroUrl from "@assets/Reception_-_Hero_Image_1776875350329.png";
 import team1Url from "@assets/Doctor_with_Her_Team_1776875350328.jpg";
@@ -260,7 +261,17 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">Loved by Palakkad families.</h2>
           </FadeIn>
 
-          <Carousel opts={{ loop: true }} plugins={[]} className="w-full">
+          <Carousel
+            opts={{ loop: true }}
+            plugins={[
+              Autoplay({
+                delay: 5000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+            className="w-full"
+          >
             <CarouselContent>
               {[
                 [
