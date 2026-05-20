@@ -67,7 +67,7 @@ export default function Home() {
               <motion.div 
                 whileHover={{ scale: 1.03, rotateX: 2, rotateY: -2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group cursor-pointer"
+                className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square md:aspect-[4/3] group cursor-pointer"
               >
                 <img 
                   src={heroUrl} 
@@ -79,16 +79,16 @@ export default function Home() {
             </FadeIn>
             
             {/* Floating badge */}
-            <FadeIn delay={0.5} className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-2xl shadow-xl max-w-xs border border-border/50 hover:-translate-y-2 transition-transform duration-300">
+            <FadeIn delay={0.5} className="absolute -bottom-4 -left-3 xs:-left-6 md:-bottom-6 md:-left-12 bg-white p-4 md:p-6 rounded-2xl shadow-xl max-w-[270px] xs:max-w-[310px] md:max-w-xs border border-border/50 hover:-translate-y-2 transition-transform duration-300">
               <div className="flex gap-1 mb-2">
                 {[1,2,3,4,5].map(i => (
-                  <svg key={i} className="w-5 h-5 text-secondary fill-current" viewBox="0 0 20 20">
+                  <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-secondary fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
-              <p className="text-sm font-medium text-foreground italic">"I went to see this dentist expecting my tooth can't be saved... Am very happy now to have got my smile back."</p>
-              <p className="text-xs text-muted-foreground mt-2">— Bharathy MK</p>
+              <p className="text-xs md:text-sm font-medium text-foreground italic">"I went to see this dentist expecting my tooth can't be saved... Am very happy now to have got my smile back."</p>
+              <p className="text-[10px] md:text-xs text-muted-foreground mt-2">— Bharathy MK</p>
             </FadeIn>
           </div>
         </div>
@@ -159,13 +159,13 @@ export default function Home() {
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               At Citident, we believe visiting the dentist shouldn't feel like a clinical transaction. We've designed a calm, inviting space where anxiety melts away, replaced by trust and transparency. Our team focuses on conservative dentistry—saving your natural teeth before considering extractions.
             </p>
-            <div className="grid grid-cols-3 gap-3 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
               {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => (
-                <div key={src} className={`group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 1 ? "md:-mt-6" : ""}`}>
+                <div key={src} className={`group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 1 ? "sm:-mt-6" : ""}`}>
                   <img
                     src={src}
                     alt={`Citident team ${index + 1}`}
-                    className="w-full h-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover aspect-[16/10] sm:aspect-[3/4] transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               ))}

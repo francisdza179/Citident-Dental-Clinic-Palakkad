@@ -62,18 +62,18 @@ export default function About() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.img 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                   src={team1Url} alt="Citident team at reception" 
-                  className="rounded-3xl object-cover w-full h-full aspect-[4/5] shadow-lg cursor-pointer" 
+                  className="rounded-3xl object-cover w-full h-full aspect-[4/3] sm:aspect-[4/5] shadow-lg cursor-pointer" 
                 />
                 <motion.img 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                   src={celebrationUrl} alt="Team celebration" 
-                  className="rounded-3xl object-cover w-full h-full aspect-[4/5] shadow-lg mt-8 cursor-pointer" 
+                  className="rounded-3xl object-cover w-full h-full aspect-[4/3] sm:aspect-[4/5] shadow-lg sm:mt-8 cursor-pointer" 
                 />
               </div>
             </FadeIn>
@@ -137,9 +137,9 @@ export default function About() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <motion.img whileHover={{ scale: 1.05 }} src={work1Url} alt="Dentists at work" className="rounded-3xl object-cover w-full h-full aspect-square cursor-pointer shadow-2xl" />
-                <motion.img whileHover={{ scale: 1.05 }} src={work2Url} alt="Doctor with loupes" className="rounded-3xl object-cover w-full h-full aspect-square mt-12 cursor-pointer shadow-2xl" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <motion.img whileHover={{ scale: 1.05 }} src={work1Url} alt="Dentists at work" className="rounded-3xl object-cover w-full h-full aspect-[4/3] sm:aspect-square cursor-pointer shadow-2xl" />
+                <motion.img whileHover={{ scale: 1.05 }} src={work2Url} alt="Doctor with loupes" className="rounded-3xl object-cover w-full h-full aspect-[4/3] sm:aspect-square sm:mt-12 cursor-pointer shadow-2xl" />
               </div>
             </FadeIn>
           </div>

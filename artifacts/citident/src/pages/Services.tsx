@@ -128,7 +128,7 @@ export default function Services() {
               whileHover={{ scale: 1.02 }}
               className="rounded-3xl overflow-hidden shadow-2xl"
             >
-              <img src={alignersUrl} alt="Doctor presenting clear aligners" className="w-full h-full object-cover aspect-[4/3]" />
+              <img src={alignersUrl} alt="Doctor presenting clear aligners" className="w-full h-full object-cover object-top aspect-[4/3]" />
             </motion.div>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -140,7 +140,7 @@ export default function Services() {
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 src={work3Url} alt="Dr. Priya Dinesh at work" 
-                className="w-1/2 rounded-2xl object-cover aspect-square shadow-lg" 
+                className="w-full sm:w-1/2 rounded-2xl object-cover aspect-square shadow-lg" 
               />
             </div>
           </FadeIn>

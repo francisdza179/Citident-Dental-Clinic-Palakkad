@@ -41,7 +41,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             <FadeIn>
-              <div className="bg-card border border-border/50 p-10 rounded-3xl shadow-sm h-full flex flex-col justify-center">
+              <div className="bg-card border border-border/50 p-6 sm:p-10 rounded-3xl shadow-sm h-full flex flex-col justify-center">
                 
                 <div className="flex items-start gap-6 mb-12 group">
                   <div className="bg-primary/5 p-4 rounded-2xl group-hover:bg-primary/10 transition-colors">
@@ -50,7 +50,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2">Call to book</p>
                     <div className="flex items-center gap-4">
-                      <a href={`tel:${PHONE_RAW}`} className="text-3xl md:text-4xl font-bold text-primary hover:text-secondary transition-colors">
+                      <a href={`tel:${PHONE_RAW}`} className="text-2xl xs:text-3xl md:text-4xl font-bold text-primary hover:text-secondary transition-colors">
                         {PHONE}
                       </a>
                       <button 
@@ -70,7 +70,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2">Clinic Address</p>
-                    <p className="text-lg text-foreground leading-relaxed">
+                    <p className="text-base sm:text-lg text-foreground leading-relaxed">
                       Priyadarshini Rd, opposite Aroma Cinemas<br/>
                       Parakkunnam, Palakkad<br/>
                       Kerala 678001
@@ -90,8 +90,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2">Opening Hours</p>
-                    <div className="space-y-2 text-lg">
-                      <div className="flex justify-between gap-8 border-b border-border/50 pb-2">
+                    <div className="space-y-2 text-sm sm:text-base md:text-lg">
+                      <div className="flex justify-between gap-4 sm:gap-8 border-b border-border/50 pb-2">
                         <span className="text-foreground">Monday – Saturday</span>
                         <span className="font-medium text-primary">9:30 AM – 7:30 PM</span>
                       </div>
