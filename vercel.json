@@ -1,5 +1,6 @@
 {
   "version": 2,
   "buildCommand": "pnpm --filter @workspace/citident run build",
+  "outputDirectory": "artifacts/citident/dist/public",
   "cleanUrls": true
 }
