@@ -162,16 +162,16 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
 {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => {
    // Adjust vertical position to push subjects down in frame:
-   // Index 0 (first image): push subjects down 15% = move image down 15%
-   // Index 1 (second image): push subjects down 30% = move image down 30%
+   // Index 0 (first image): push subjects down 15%
+   // Index 1 (second image): push subjects down 30%
    // Index 2 (third image): centered (as requested)
    let position = "object-center";
    if (index === 0) {
-     // Push subjects down 15% = move image down 15% = 50% + 15% = 65% from top
-     position = "object-[object-position:50%_65%]";
+     // Push subjects down 15% = move image up 15% = 50% - 15% = 35% from top
+     position = "object-[object-position:50%_35%]";
    } else if (index === 1) {
-     // Push subjects down 30% = move image down 30% = 50% + 30% = 80% from top
-     position = "object-[object-position:50%_80%]";
+     // Push subjects down 30% = move image up 30% = 50% - 30% = 20% from top
+     position = "object-[object-position:50%_20%]";
    }
    // index 2 remains object-center (default = 50%_50%)
    
