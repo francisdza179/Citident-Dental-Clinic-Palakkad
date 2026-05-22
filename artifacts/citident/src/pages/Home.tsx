@@ -160,15 +160,15 @@ export default function Home() {
               At Citident, we believe visiting the dentist shouldn't feel like a clinical transaction. We've designed a calm, inviting space where anxiety melts away, replaced by trust and transparency. Our team focuses on conservative dentistry—saving your natural teeth before considering extractions.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-              {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => (
-                <div key={src} className={`group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 1 ? "sm:-mt-6" : ""}`}>
-                  <img
-                    src={src}
-                    alt={`Citident team ${index + 1}`}
-                    className="w-full h-full object-cover aspect-[16/10] sm:aspect-[3/4] transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-              ))}
+{[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => (
+                 <div key={src} className={`group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 1 ? "sm:-mt-6" : ""}`}>
+                   <img
+                     src={src}
+                     alt={`Citident team ${index + 1}`}
+                     className="w-full h-full object-[object-position:top] object-cover aspect-[16/10] sm:aspect-[3/4] transition-transform duration-500 group-hover:scale-110"
+                   />
+                 </div>
+               ))}
             </div>
             <p className="text-sm uppercase tracking-[0.25em] text-secondary font-semibold mb-4">
               Serving Palakkad since 2000
