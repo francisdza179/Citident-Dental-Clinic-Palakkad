@@ -161,20 +161,28 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
 {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => {
-  // Default is centered (good for first and third images)
-  // For second image (index 1), adjust slightly upward but not fully top
-  const position = index === 1 ? "object-[object-position:top_25%]" : "object-center";
-  
-  return (
-    <div key={src} className="group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <img
-        src={src}
-        alt={`Citident team ${index + 1}`}
-        className={`w-full h-full object-cover ${position} aspect-[16/10] sm:aspect-[3/4] transition-transform duration-500 group-hover:scale-110`}
-      />
-    </div>
-  );
-})}
+   // Adjust vertical position to show subjects properly:
+   // Index 0 (first image): push down 15% (show top 85%)
+   // Index 1 (second image): push down 30% (show top 70%) 
+   // Index 2 (third image): centered (as requested)
+   let position = "object-center";
+   if (index === 0) {
+     position = "object-[object-position:bottom_15%]"; // Push down 15%
+   } else if (index === 1) {
+     position = "object-[object-position:bottom_30%]"; // Push down 30%
+   }
+   // index 2 remains object-center (default)
+   
+   return (
+     <div key={src} className="group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+       <img
+         src={src}
+         alt={`Citident team ${index + 1}`}
+         className={`w-full h-full object-cover ${position} aspect-[16/10] sm:aspect-[3/4] transition-transform duration-500 group-hover:scale-110`}
+       />
+     </div>
+   );
+ })}
             </div>
             <p className="text-sm uppercase tracking-[0.25em] text-secondary font-semibold mb-4">
               Serving Palakkad since 2000
