@@ -161,17 +161,19 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
 {[teamPhoto1Url, teamPhoto2Url, teamPhoto3Url].map((src, index) => {
-   // Adjust vertical position to show subjects properly:
-   // Index 0 (first image): push down 15% (show top 85%)
-   // Index 1 (second image): push down 30% (show top 70%) 
+   // Adjust vertical position to push subjects down in frame:
+   // Index 0 (first image): push subjects down 15% = move image down 15%
+   // Index 1 (second image): push subjects down 30% = move image down 30%
    // Index 2 (third image): centered (as requested)
    let position = "object-center";
    if (index === 0) {
-     position = "object-[object-position:bottom_15%]"; // Push down 15%
+     // Push subjects down 15% = move image down 15% = 50% + 15% = 65% from top
+     position = "object-[object-position:50%_65%]";
    } else if (index === 1) {
-     position = "object-[object-position:bottom_30%]"; // Push down 30%
+     // Push subjects down 30% = move image down 30% = 50% + 30% = 80% from top
+     position = "object-[object-position:50%_80%]";
    }
-   // index 2 remains object-center (default)
+   // index 2 remains object-center (default = 50%_50%)
    
    return (
      <div key={src} className="group rounded-2xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
