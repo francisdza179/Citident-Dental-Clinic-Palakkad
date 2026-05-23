@@ -42,7 +42,7 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Led by Dr. Priya Dinesh, Citident is Palakkad's premium neighborhood clinic. We use cutting-edge equipment to provide conservative, comfortable care—saving teeth other clinics give up on.
+                Led by Dr. Priya Chandran, Citident is Palakkad's premium neighborhood clinic. We use cutting-edge equipment to provide conservative, comfortable care—saving teeth other clinics give up on.
               </p>
             </FadeIn>
             <FadeIn delay={0.2} className="mt-10 flex flex-wrap gap-4">
@@ -110,10 +110,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Priya Dinesh",
+                name: "Dr. Priya Chandran",
                 title: "Chief Dental Surgeon, BDS",
                 img: doctorPriyaUrl,
-                desc: "A calm and reassuring presence at the chairside, Dr. Priya Dinesh leads with a careful, tooth-saving approach. She focuses on conservative treatment planning and clear communication so families always feel informed and comfortable."
+                desc: "A calm and reassuring presence at the chairside, Dr. Priya Chandran leads with a careful, tooth-saving approach. She focuses on conservative treatment planning and clear communication so families always feel informed and comfortable."
               },
               {
                 name: "Dr. Dinesh S.P.",

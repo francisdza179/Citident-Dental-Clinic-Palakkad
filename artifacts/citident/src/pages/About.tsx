@@ -17,12 +17,12 @@ import work2Url from "@assets/Doctor_Checking_Tooth_3_1776875350326.jpg";
 export default function About() {
   usePageMeta({
     title: "About Us",
-    description: "Meet the expert dental team at Citident Dental Clinic, led by Dr. Priya Dinesh. We provide care that feels like family."
+    description: "Meet the expert dental team at Citident Dental Clinic, led by Dr. Priya Chandran. We provide care that feels like family."
   });
 
   const doctors = [
     {
-      name: "Dr. Priya Dinesh",
+      name: "Dr. Priya Chandran",
       role: "Chief Dental Surgeon, BDS",
       image: priyaPortrait,
       bio: "Dr. Priya leads Citident with a deep commitment to conservative dentistry. Her calm chairside manner ensures that even the most anxious patients feel comfortable. She focuses on modern, tooth-saving treatments designed for long-term oral health."

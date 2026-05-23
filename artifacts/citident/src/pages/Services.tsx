@@ -139,7 +139,7 @@ export default function Services() {
             <div className="flex gap-4">
               <motion.img 
                 whileHover={{ scale: 1.05 }}
-                src={work3Url} alt="Dr. Priya Dinesh at work" 
+                src={work3Url} alt="Dr. Priya Chandran at work" 
                 className="w-full sm:w-1/2 rounded-2xl object-cover aspect-square shadow-lg" 
               />
             </div>
