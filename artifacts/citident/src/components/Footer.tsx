@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 import logoUrl from "@assets/Citident_Logo_-_Transparent_V2_1776927029164.png";
 
 const PHONE = "+914912529090";
@@ -19,6 +20,26 @@ export function Footer() {
             <p className="text-primary-foreground/80 text-base max-w-sm leading-relaxed">
               Palakkad's premium family dental clinic providing cutting-edge, honest care.
             </p>
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href="https://www.instagram.com/citident__dental_clinic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.facebook.com/p/Citident-Dental-Clinic-100057577443665/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="w-6 h-6" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
